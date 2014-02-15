@@ -1,0 +1,438 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
+    ],
+    "hash": "0d30276ef2392336eee78e29db6920bf",
+    "packages": [
+        {
+            "name": "bjyoungblood/bjy-profiler",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/bjyoungblood/BjyProfiler.git",
+                "reference": "1ad040a59791bf28eafe4d27d485877d925db43e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/bjyoungblood/BjyProfiler/zipball/1ad040a59791bf28eafe4d27d485877d925db43e",
+                "reference": "1ad040a59791bf28eafe4d27d485877d925db43e",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3",
+                "zendframework/zendframework": ">=2.1.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "BjyProfiler": "src/"
+                },
+                "classmap": [
+                    "./Module.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "Ben Youngblood",
+                    "email": "bx.youngblood@gmail.com",
+                    "homepage": "http://bjyoungblood.com/",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Database profiler for Zend\\Db (also plugin for ZendDeveloperTools)",
+            "homepage": "https://github.com/bjyoungblood/BjyProfiler",
+            "keywords": [
+                "db",
+                "profiler",
+                "zdt",
+                "zf2"
+            ],
+            "time": "2013-07-25 02:55:43"
+        },
+        {
+            "name": "goalio/goalio-forgotpassword",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/goalio/GoalioForgotPassword.git",
+                "reference": "894bae181adda5d723d16e472b025c7b42234acf"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/goalio/GoalioForgotPassword/zipball/894bae181adda5d723d16e472b025c7b42234acf",
+                "reference": "894bae181adda5d723d16e472b025c7b42234acf",
+                "shasum": ""
+            },
+            "require": {
+                "goalio/goalio-mailservice": "0.*",
+                "php": ">=5.3.3",
+                "zendframework/zendframework": "2.*",
+                "zf-commons/zfc-base": "0.*",
+                "zf-commons/zfc-user": "0.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "GoalioForgotPassword": "src/"
+                },
+                "classmap": [
+                    "./Module.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "Philipp Dobrigkeit",
+                    "email": "p.dobrigkeit@goalio.de",
+                    "homepage": "http://www.goalio.de"
+                }
+            ],
+            "description": "Adding Forgot Password functionalitiy to ZfcUser",
+            "homepage": "https://github.com/goalio/GoalioForgotPassword",
+            "keywords": [
+                "zf2",
+                "zfcuser"
+            ],
+            "time": "2013-12-12 13:01:27"
+        },
+        {
+            "name": "goalio/goalio-mailservice",
+            "version": "0.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/goalio/GoalioMailService.git",
+                "reference": "0e1bebb61b78b8af7f7cd20a1c5067dc1d0e593a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/goalio/GoalioMailService/zipball/0e1bebb61b78b8af7f7cd20a1c5067dc1d0e593a",
+                "reference": "0e1bebb61b78b8af7f7cd20a1c5067dc1d0e593a",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3",
+                "zendframework/zendframework": "2.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "GoalioMailService": "src/"
+                },
+                "classmap": [
+                    "./Module.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "Philipp Dobrigkeit",
+                    "email": "p.dobrigkeit@goalio.de",
+                    "homepage": "http://www.goalio.de"
+                }
+            ],
+            "description": "Provide configurable Mail Transport Factories for ZF2",
+            "homepage": "https://github.com/goalio/GoalioMailService",
+            "keywords": [
+                "zf2"
+            ],
+            "time": "2013-08-13 10:08:53"
+        },
+        {
+            "name": "goalio/goalio-rememberme",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/goalio/GoalioRememberMe.git",
+                "reference": "262368b891ec97b35c709ef1459b20f0532f1705"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/goalio/GoalioRememberMe/zipball/262368b891ec97b35c709ef1459b20f0532f1705",
+                "reference": "262368b891ec97b35c709ef1459b20f0532f1705",
+                "shasum": ""
+            },
+            "require": {
+                "zf-commons/zfc-user": "0.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "GoalioRememberMe": "src/"
+                },
+                "classmap": [
+                    "./Module.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "Philipp Dobrigkeit",
+                    "email": "p.dobrigkeit@goalio.de",
+                    "homepage": "http://www.goalio.de"
+                }
+            ],
+            "description": "Adding Remember Me functionalitiy to ZfcUser",
+            "homepage": "https://github.com/goalio/GoalioRememberMe",
+            "keywords": [
+                "zf2",
+                "zfcuser"
+            ],
+            "time": "2013-08-02 12:51:18"
+        },
+        {
+            "name": "zendframework/zendframework",
+            "version": "2.2.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/zendframework/zf2.git",
+                "reference": "4a7cf6a4cf791244e14aa0ca49d1f06916b63202"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/zendframework/zf2/zipball/4a7cf6a4cf791244e14aa0ca49d1f06916b63202",
+                "reference": "4a7cf6a4cf791244e14aa0ca49d1f06916b63202",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "replace": {
+                "zendframework/zend-authentication": "self.version",
+                "zendframework/zend-barcode": "self.version",
+                "zendframework/zend-cache": "self.version",
+                "zendframework/zend-captcha": "self.version",
+                "zendframework/zend-code": "self.version",
+                "zendframework/zend-config": "self.version",
+                "zendframework/zend-console": "self.version",
+                "zendframework/zend-crypt": "self.version",
+                "zendframework/zend-db": "self.version",
+                "zendframework/zend-debug": "self.version",
+                "zendframework/zend-di": "self.version",
+                "zendframework/zend-dom": "self.version",
+                "zendframework/zend-escaper": "self.version",
+                "zendframework/zend-eventmanager": "self.version",
+                "zendframework/zend-feed": "self.version",
+                "zendframework/zend-file": "self.version",
+                "zendframework/zend-filter": "self.version",
+                "zendframework/zend-form": "self.version",
+                "zendframework/zend-http": "self.version",
+                "zendframework/zend-i18n": "self.version",
+                "zendframework/zend-inputfilter": "self.version",
+                "zendframework/zend-json": "self.version",
+                "zendframework/zend-ldap": "self.version",
+                "zendframework/zend-loader": "self.version",
+                "zendframework/zend-log": "self.version",
+                "zendframework/zend-mail": "self.version",
+                "zendframework/zend-math": "self.version",
+                "zendframework/zend-memory": "self.version",
+                "zendframework/zend-mime": "self.version",
+                "zendframework/zend-modulemanager": "self.version",
+                "zendframework/zend-mvc": "self.version",
+                "zendframework/zend-navigation": "self.version",
+                "zendframework/zend-paginator": "self.version",
+                "zendframework/zend-permissions-acl": "self.version",
+                "zendframework/zend-permissions-rbac": "self.version",
+                "zendframework/zend-progressbar": "self.version",
+                "zendframework/zend-resources": "self.version",
+                "zendframework/zend-serializer": "self.version",
+                "zendframework/zend-server": "self.version",
+                "zendframework/zend-servicemanager": "self.version",
+                "zendframework/zend-session": "self.version",
+                "zendframework/zend-soap": "self.version",
+                "zendframework/zend-stdlib": "self.version",
+                "zendframework/zend-tag": "self.version",
+                "zendframework/zend-test": "self.version",
+                "zendframework/zend-text": "self.version",
+                "zendframework/zend-uri": "self.version",
+                "zendframework/zend-validator": "self.version",
+                "zendframework/zend-version": "self.version",
+                "zendframework/zend-view": "self.version",
+                "zendframework/zend-xmlrpc": "self.version"
+            },
+            "require-dev": {
+                "doctrine/annotations": ">=1.0",
+                "fabpot/php-cs-fixer": "*@dev",
+                "ircmaxell/random-lib": "dev-master",
+                "ircmaxell/security-lib": "dev-master",
+                "ocramius/proxy-manager": "0.4.*",
+                "phpunit/phpunit": "3.7.*"
+            },
+            "suggest": {
+                "doctrine/annotations": "Doctrine Annotations >=1.0 for annotation features",
+                "ext-intl": "ext/intl for i18n features (included in default builds of PHP)",
+                "ircmaxell/random-lib": "Fallback random byte generator for Zend\\Math\\Rand if OpenSSL/Mcrypt extensions are unavailable",
+                "ocramius/proxy-manager": "ProxyManager to handle lazy initialization of services",
+                "zendframework/zendpdf": "ZendPdf for creating PDF representations of barcodes",
+                "zendframework/zendservice-recaptcha": "ZendService\\ReCaptcha for rendering ReCaptchas in Zend\\Captcha and/or Zend\\Form"
+            },
+            "bin": [
+                "bin/classmap_generator.php",
+                "bin/pluginmap_generator.php",
+                "bin/templatemap_generator.php"
+            ],
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.2-dev",
+                    "dev-develop": "2.3-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Zend\\": "library/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "description": "Zend Framework 2",
+            "homepage": "http://framework.zend.com/",
+            "keywords": [
+                "framework",
+                "zf2"
+            ],
+            "time": "2013-10-31 15:48:16"
+        },
+        {
+            "name": "zf-commons/zfc-base",
+            "version": "v0.1.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ZF-Commons/ZfcBase.git",
+                "reference": "fc68a49b58ba68584a9a4c44a1ca9df12b30d1bf"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ZF-Commons/ZfcBase/zipball/fc68a49b58ba68584a9a4c44a1ca9df12b30d1bf",
+                "reference": "fc68a49b58ba68584a9a4c44a1ca9df12b30d1bf",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3",
+                "zendframework/zend-db": "~2.1",
+                "zendframework/zend-eventmanager": "~2.1",
+                "zendframework/zend-loader": "~2.1",
+                "zendframework/zend-modulemanager": "~2.1",
+                "zendframework/zend-mvc": "~2.1",
+                "zendframework/zend-servicemanager": "~2.1",
+                "zendframework/zend-stdlib": "~2.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "ZfcBase": "src/"
+                },
+                "classmap": [
+                    "./Module.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "Kyle Spraggs",
+                    "email": "theman@spiffyjr.me",
+                    "homepage": "http://www.spiffyjr.me/"
+                },
+                {
+                    "name": "Evan Coury",
+                    "email": "me@evancoury.com",
+                    "homepage": "http://blog.evan.pro/"
+                }
+            ],
+            "description": "A set of genetic (abstract) classes which are commonly used across multiple modules.",
+            "homepage": "https://github.com/ZF-Commons/ZfcBase",
+            "keywords": [
+                "zf2"
+            ],
+            "time": "2013-05-02 12:33:49"
+        },
+        {
+            "name": "zf-commons/zfc-user",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ZF-Commons/ZfcUser.git",
+                "reference": "65dca5c38f23554290c02c985e2c5ca982bc032e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ZF-Commons/ZfcUser/zipball/65dca5c38f23554290c02c985e2c5ca982bc032e",
+                "reference": "65dca5c38f23554290c02c985e2c5ca982bc032e",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3",
+                "zendframework/zend-authentication": "~2.1",
+                "zendframework/zend-crypt": "~2.1",
+                "zendframework/zend-form": "~2.1",
+                "zendframework/zend-inputfilter": "~2.1",
+                "zendframework/zend-loader": "~2.1",
+                "zendframework/zend-modulemanager": "~2.1",
+                "zendframework/zend-mvc": "~2.1",
+                "zendframework/zend-servicemanager": "~2.1",
+                "zendframework/zend-stdlib": "~2.1",
+                "zendframework/zend-validator": "~2.1",
+                "zendframework/zend-view": "~2.1",
+                "zf-commons/zfc-base": "0.*"
+            },
+            "suggest": {
+                "zendframework/zend-session": "To use the default authentication adapter."
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "ZfcUser": "src/"
+                },
+                "classmap": [
+                    "./Module.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "Kyle Spraggs",
+                    "email": "theman@spiffyjr.me",
+                    "homepage": "http://www.spiffyjr.me/"
+                },
+                {
+                    "name": "Evan Coury",
+                    "email": "me@evancoury.com",
+                    "homepage": "http://blog.evan.pro/"
+                }
+            ],
+            "description": "A generic user registration and authentication module for ZF2. Supports Zend\\Db and Doctrine2.",
+            "homepage": "https://github.com/ZF-Commons/ZfcUser",
+            "keywords": [
+                "zf2"
+            ],
+            "time": "2014-02-13 22:45:57"
+        }
+    ],
+    "packages-dev": [
+
+    ],
+    "aliases": [
+
+    ],
+    "minimum-stability": "stable",
+    "stability-flags": {
+        "zf-commons/zfc-user": 20,
+        "goalio/goalio-forgotpassword": 20,
+        "goalio/goalio-rememberme": 20,
+        "bjyoungblood/bjy-profiler": 20
+    },
+    "platform": {
+        "php": ">=5.3.3"
+    },
+    "platform-dev": [
+
+    ]
+}
