@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Zend Framework (http://framework.zend.com/)
  *
@@ -6,17 +7,162 @@
  * @copyright Copyright (c) 2005-2014 Zend Technologies USA Inc. (http://www.zend.com)
  * @license   http://framework.zend.com/license/new-bsd New BSD License
  */
-
 return array(
     'router' => array(
         'routes' => array(
             'home' => array(
-                'type' => 'Zend\Mvc\Router\Http\Literal',
+                'type' => 'Zend\Mvc\Router\Http\Segment',
                 'options' => array(
-                    'route'    => '/',
+                    'route' => '[/:lang]/',
+                    'constraints' => array(
+                        'lang' => '(en|fr)?',
+                    ),
                     'defaults' => array(
                         'controller' => 'Application\Controller\Index',
-                        'action'     => 'index',
+                        'action' => 'index',
+                    ),
+                ),
+                'may_terminate' => true,
+            ),
+            /* Routes for user */
+            'user' => array(
+                'type' => 'Zend\Mvc\Router\Http\Literal',
+                'options' => array(
+                    'route' => '/user',
+                    'defaults' => array(
+                        'controller' => 'Admin\Controller\User',
+                        'action' => 'index',
+                    ),
+                ),
+                'may_terminate' => true,
+                'child_routes' => array(
+                    'show' => array(
+                        'type' => 'Zend\Mvc\Router\Http\Segment',
+                        'options' => array(
+                            'route' => '/show/:id',
+                            'constraints' => array(
+                                'id' => '[1-9][0-9]*',
+                            ),
+                            'defaults' => array(
+                                'controller' => 'Admin\Controller\User',
+                                'action' => 'show',
+                            ),
+                        ),
+                        'may_terminate' => true,
+                    ),
+                    'list' => array(
+                        'type' => 'Zend\Mvc\Router\Http\Literal',
+                        'options' => array(
+                            'route' => '/list',
+                            'defaults' => array(
+                                'controller' => 'Admin\Controller\User',
+                                'action' => 'list',
+                            ),
+                        ),
+                        'may_terminate' => true,
+                    ),
+                    'transfer' => array(
+                        'type' => 'Zend\Mvc\Router\Http\Literal',
+                        'options' => array(
+                            'route' => '/transfer',
+                            'defaults' => array(
+                                'controller' => 'Admin\Controller\User',
+                                'action' => 'transfer',
+                            ),
+                        ),
+                        'may_terminate' => true,
+                    ),
+                    'transfertable' => array(
+                        'type' => 'Zend\Mvc\Router\Http\Literal',
+                        'options' => array(
+                            'route' => '/transfertable',
+                            'defaults' => array(
+                                'controller' => 'Admin\Controller\User',
+                                'action' => 'transferTable',
+                            ),
+                        ),
+                        'may_terminate' => true,
+                    ),
+                ),
+            ),
+            
+            /* Change route Zfcuser with lang */
+            'zfcuser' => array(
+                'type' => 'Segment',
+                'priority' => 1000,
+                'options' => array(
+                    //'route' => '/user',
+                    'route' => '[/:lang]/user',
+                    'constraints' => array(
+                        'lang' => '(en|fr)?',
+                    ),
+                    'defaults' => array(
+                        'controller' => 'zfcuser',
+                        'action' => 'index',
+                        'lang' => 'en'
+                    ),
+                ),
+                'may_terminate' => true,
+                'child_routes' => array(
+                    'login' => array(
+                        'type' => 'Literal',
+                        'options' => array(
+                            'route' => '/login',
+                            'defaults' => array(
+                                'controller' => 'zfcuser',
+                                'action' => 'login',
+                            ),
+                        ),
+                    ),
+                    'authenticate' => array(
+                        'type' => 'Literal',
+                        'options' => array(
+                            'route' => '/authenticate',
+                            'defaults' => array(
+                                'controller' => 'zfcuser',
+                                'action' => 'authenticate',
+                            ),
+                        ),
+                    ),
+                    'logout' => array(
+                        'type' => 'Literal',
+                        'options' => array(
+                            'route' => '/logout',
+                            'defaults' => array(
+                                'controller' => 'zfcuser',
+                                'action' => 'logout',
+                            ),
+                        ),
+                    ),
+                    'register' => array(
+                        'type' => 'Literal',
+                        'options' => array(
+                            'route' => '/register',
+                            'defaults' => array(
+                                'controller' => 'zfcuser',
+                                'action' => 'register',
+                            ),
+                        ),
+                    ),
+                    'changepassword' => array(
+                        'type' => 'Literal',
+                        'options' => array(
+                            'route' => '/change-password',
+                            'defaults' => array(
+                                'controller' => 'zfcuser',
+                                'action' => 'changepassword',
+                            ),
+                        ),
+                    ),
+                    'changeemail' => array(
+                        'type' => 'Literal',
+                        'options' => array(
+                            'route' => '/change-email',
+                            'defaults' => array(
+                                'controller' => 'zfcuser',
+                                'action' => 'changeemail',
+                            ),
+                        ),
                     ),
                 ),
             ),
@@ -25,24 +171,24 @@ return array(
             // module. Simply drop new controllers in, and you can access them
             // using the path /application/:controller/:action
             'application' => array(
-                'type'    => 'Literal',
+                'type' => 'Literal',
                 'options' => array(
-                    'route'    => '/application',
+                    'route' => '/application',
                     'defaults' => array(
                         '__NAMESPACE__' => 'Application\Controller',
-                        'controller'    => 'Index',
-                        'action'        => 'index',
+                        'controller' => 'Index',
+                        'action' => 'index',
                     ),
                 ),
                 'may_terminate' => true,
                 'child_routes' => array(
                     'default' => array(
-                        'type'    => 'Segment',
+                        'type' => 'Segment',
                         'options' => array(
-                            'route'    => '/[:controller[/:action]]',
+                            'route' => '/[:controller[/:action]]',
                             'constraints' => array(
                                 'controller' => '[a-zA-Z][a-zA-Z0-9_-]*',
-                                'action'     => '[a-zA-Z][a-zA-Z0-9_-]*',
+                                'action' => '[a-zA-Z][a-zA-Z0-9_-]*',
                             ),
                             'defaults' => array(
                             ),
@@ -65,9 +211,9 @@ return array(
         'locale' => 'en_US',
         'translation_file_patterns' => array(
             array(
-                'type'     => 'gettext',
+                'type' => 'gettext',
                 'base_dir' => __DIR__ . '/../language',
-                'pattern'  => '%s.mo',
+                'pattern' => '%s.mo',
             ),
         ),
     ),
@@ -78,15 +224,22 @@ return array(
     ),
     'view_manager' => array(
         'display_not_found_reason' => true,
-        'display_exceptions'       => true,
-        'doctype'                  => 'HTML5',
-        'not_found_template'       => 'error/404',
-        'exception_template'       => 'error/index',
+        'display_exceptions' => true,
+        'doctype' => 'HTML5',
+        'not_found_template' => 'error/404',
+        'exception_template' => 'error/index',
         'template_map' => array(
-            'layout/layout'           => __DIR__ . '/../view/layout/layout.phtml',
+            'layout/layout' => __DIR__ . '/../view/layout/layout.phtml',
             'application/index/index' => __DIR__ . '/../view/application/index/index.phtml',
-            'error/404'               => __DIR__ . '/../view/error/404.phtml',
-            'error/index'             => __DIR__ . '/../view/error/index.phtml',
+            // Template Menu Zfcuser
+            'menu/logout' => __DIR__ . '/../view/layout/menu/logout.phtml',
+            'menu/login-register' => __DIR__ . '/../view/layout/menu/login-register.phtml',
+            'error/404' => __DIR__ . '/../view/error/404.phtml',
+            'error/index' => __DIR__ . '/../view/error/index.phtml',
+            
+            // Template zfc-user login ovveride
+            'zfc-user/user/login' => __DIR__ . '/../view/zfc-user/user/login.phtml',
+            
         ),
         'template_path_stack' => array(
             __DIR__ . '/../view',
