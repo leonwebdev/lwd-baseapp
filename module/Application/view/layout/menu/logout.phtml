@@ -1,0 +1,14 @@
+ <ul class="nav navbar-nav navbar-right">
+    <li class="dropdown">
+        <a class="dropdown-toggle" href="<?php echo $this->url('zfcuser/logout', array(), 
+                array(
+                    'query' => array(
+                        'redirect' => $this->url('home', array(), null, true)
+                     )
+                ), true);
+                ?>
+                <?php //echo $this->url('zfcuser/logout'); ?>">
+            <i class="icon-signout"></i> <?php echo $this->translate('Logout') ?>
+        </a>
+    </li>
+</ul>

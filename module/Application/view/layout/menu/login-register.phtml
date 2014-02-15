@@ -1,0 +1,25 @@
+ <ul class="nav navbar-nav navbar-right">
+    <li class="dropdown">
+        <a class="dropdown-toggle" href="<?php echo $this->url('zfcuser/login', array(), 
+                array(
+                    'query' => array(
+                        'redirect' => $this->url('zfcuser', array(), null, true)
+                     )
+                ), true);
+                ?>">
+            <i class="icon-signin"></i> <?php echo $this->translate('Login') ?>
+        </a>
+    </li>
+    <li class="dropdown">
+        <a class="dropdown-toggle" href="<?php echo $this->url('zfcuser/register', array(), 
+                array(
+                    'query' => array(
+                        'redirect' => $this->url('zfcuser', array(), null, true)
+                     )
+                ), true);
+                ?>
+            <?php //echo $this->url('zfcuser/register', array(), null, true) ?>">
+            <?php echo $this->translate('Register') ?>
+        </a>
+    </li>
+</ul>

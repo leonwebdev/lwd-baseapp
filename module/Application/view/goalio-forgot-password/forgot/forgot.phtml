@@ -1,0 +1,38 @@
+<h1><?php echo $this->translate('Forgot your password?') ?></h1>
+
+<?php
+$form = $this->forgotForm;
+$email = $form->get('email');
+$email->setLabel($this->translate('Email'));
+$email->setAttribute('class', 'form-control');
+$email->setAttribute('type', 'email');
+$email->setAttribute('placeholder', $this->translate('Enter email'));
+
+$formButton = $form->get('submit');
+$formButton->setAttribute('class', 'btn btn-default');
+$formButton->setAttribute('value', $this->translate('Request new password'));
+
+$form->prepare();
+$form->setAttribute('action', $this->url('zfcuser/forgotpassword', array(), null, true));
+$form->setAttribute('method', 'post');
+?>
+
+<?php echo $this->form()->openTag($form) ?>
+
+<dl class="zend_form">
+
+    <?php echo $this->formElementErrors($email) ?>
+    <div class="form-group row">
+        <div class="col-lg-4 col-md-5 col-sm-7 col-xs-12">
+            <dt><?php echo $this->formLabel($email) ?></dt>
+            <dd><?php echo $this->formInput($email) ?></dd>
+        </div>
+    </div>
+    <div class="form-group">
+        <dd><?php echo $this->formButton($formButton) ?></dd>
+    </div>
+</dl>
+
+<?php echo $this->form()->closeTag() ?>
+
+<a href="<?php echo $this->url('zfcuser/login', array(), null, true) ?>"><?php echo $this->translate('Back to login?') ?></a>

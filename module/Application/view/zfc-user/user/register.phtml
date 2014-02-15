@@ -1,0 +1,106 @@
+<?php
+if (!$this->enableRegistration) {
+    print "Registration is disabled";
+    return;
+}
+$form = $this->registerForm;
+
+$userName = $form->get('username');
+$userName->setLabel($this->translate('Username'));
+$userName->setAttribute('class', 'form-control');
+$userName->setAttribute('type', 'text');
+$userName->setAttribute('placeholder', $this->translate('Enter your username'));
+
+$email = $form->get('email');
+$email->setLabel($this->translate('Email'));
+$email->setAttribute('class', 'form-control');
+$email->setAttribute('type', 'email');
+$email->setAttribute('placeholder', $this->translate('Enter email'));
+
+$displayName = $form->get('display_name');
+$displayName->setLabel($this->translate('Display Name'));
+$displayName->setAttribute('class', 'form-control');
+$displayName->setAttribute('type', 'text');
+$displayName->setAttribute('placeholder', $this->translate('Enter your display name'));
+
+$password = $form->get('password');
+$password->setLabel($this->translate('Password'));
+$password->setAttribute('class', 'form-control');
+$password->setAttribute('type', 'password');
+$password->setAttribute('placeholder', $this->translate('Enter password'));
+
+$passwordVerify = $form->get('passwordVerify');
+$passwordVerify->setLabel($this->translate('Password Verify'));
+$passwordVerify->setAttribute('class', 'form-control');
+$passwordVerify->setAttribute('type', 'password');
+$passwordVerify->setAttribute('placeholder', $this->translate('Enter password'));
+
+$formButton = $form->get('submit');
+$formButton->setAttribute('class', 'btn btn-default');
+
+$form->prepare();
+$form->setAttribute('action', $this->url('zfcuser/register'));
+$form->setAttribute('method', 'post');
+?>
+<div class="register-form">   
+    <h1><?php echo $this->translate('Register'); ?></h1>
+    <?php echo $this->form()->openTag($form) ?>
+    <dl class="zend-form">
+        <?php if ($this->formElementErrors($form->get('email'))) : ?>
+            <div class="alert alert-danger alert-dismissable">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                <strong>Warning!</strong><?php echo $this->translate($this->formElementErrors($form->get('email'))) ?>
+            </div>
+        <?php endif ?>
+        
+        <?php if ($this->formElementErrors($form->get('passwordVerify'))) : ?>
+            <div class="alert alert-danger alert-dismissable">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                <strong>Warning!</strong><?php echo $this->translate($this->formElementErrors($form->get('passwordVerify'))) ?>
+            </div>
+        <?php endif ?>
+
+        <div class="form-group row">
+             <div class="col-lg-4 col-md-5 col-sm-7 col-xs-12">
+            <dt><?php echo $this->formLabel($userName) ?></dt>
+            <dd><?php echo $this->formInput($userName) ?></dd>
+             </div>
+        </div>
+        
+        <div class="form-group row">
+             <div class="col-lg-4 col-md-5 col-sm-7 col-xs-12">
+            <dt><?php echo $this->formLabel($form->get('email')) ?></dt>
+            <dd><?php echo $this->formInput($form->get('email')) ?></dd>
+             </div>
+        </div>
+
+        <div class="form-group row">
+            
+             <div class="col-lg-4 col-md-5 col-sm-7 col-xs-12">
+            <dt><?php echo $this->formLabel($displayName) ?></dt>
+            <dd><?php echo $this->formInput($displayName) ?></dd>
+             </div>
+        </div>
+        
+        <div class="form-group row">
+             <div class="col-lg-4 col-md-5 col-sm-7 col-xs-12">
+            <dt><?php echo $this->formLabel($form->get('password')) ?></dt>
+            <dd><?php echo $this->formInput($form->get('password')) ?></dd>
+             </div>
+        </div>
+
+        <div class="form-group row">
+             <div class="col-lg-4 col-md-5 col-sm-7 col-xs-12">
+            <dt><?php echo $this->formLabel($form->get('passwordVerify')) ?></dt>
+            <dd><?php echo $this->formInput($form->get('passwordVerify')) ?></dd>
+             </div>
+        </div>
+
+
+        <?php if ($this->redirect): ?>
+            <input type="hidden" name="redirect" value="<?php echo $this->escapeHtml($this->redirect) ?>" />
+        <?php endif ?>
+        <dd><?php echo $this->formButton($form->get('submit')) ?></dd>
+    </dl>
+    <?php echo $this->form()->closeTag() ?>
+</div>
