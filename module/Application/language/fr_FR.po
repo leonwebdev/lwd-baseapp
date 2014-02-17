@@ -2,117 +2,106 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ZendSkeletonApplication\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-07-05 22:32-0700\n"
-"PO-Revision-Date: 2012-07-05 23:36-0700\n"
-"Last-Translator: Evan Coury <me@evancoury.com>\n"
+"POT-Creation-Date: 2014-02-15 18:33+0100\n"
+"PO-Revision-Date: 2014-02-15 18:35+0100\n"
+"Last-Translator: \n"
 "Language-Team: ZF Contibutors <zf-devteam@zend.com>\n"
-"Language: \n"
+"Language: fr_FR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Poedit-KeywordsList: translate\n"
-"X-Poedit-Language: French\n"
-"X-Poedit-Country: FRANCE\n"
 "X-Poedit-Basepath: .\n"
+"X-Generator: Poedit 1.6.4\n"
 "X-Poedit-SearchPath-0: ..\n"
 
-#: ../view/layout/layout.phtml:6
-#: ../view/layout/layout.phtml:33
-msgid "Skeleton Application"
-msgstr "Skeleton Application"
-
-#: ../view/layout/layout.phtml:36
-msgid "Home"
-msgstr "Accueil"
-
-#: ../view/layout/layout.phtml:50
-msgid "All rights reserved."
-msgstr "Tous droits réservés."
-
-#: ../view/application/index/index.phtml:2
+#: ../view/application/index/index.phtml:5
 #, php-format
 msgid "Welcome to %sZend Framework 2%s"
 msgstr "Bienvenue dans le %sZend Framework 2%s"
 
-#: ../view/application/index/index.phtml:3
+#: ../view/application/index/index.phtml:6
 #, php-format
-msgid "Congratulations! You have successfully installed the %sZF2 Skeleton Application%s. You are currently running Zend Framework version %s. This skeleton can serve as a simple starting point for you to begin building your application on ZF2."
-msgstr "Félicitations ! Vous avez installé avec succès le %sZF2 Skeleton Application%s. Vous utilisez actuellement Zend Framework version %s. Cette structure peut vous servir comme un point de départ simple pour démarrer la construction de votre application avec ZF2."
+msgid ""
+"Congratulations! You have successfully installed the %sZF2 Skeleton "
+"Application%s. You are currently running Zend Framework version %s. This "
+"skeleton can serve as a simple starting point for you to begin building your "
+"application on ZF2."
+msgstr ""
+"Félicitations ! Vous avez installé avec succès le %sZF2 Skeleton Application"
+"%s. Vous utilisez actuellement Zend Framework version %s. Cette structure "
+"peut vous servir comme un point de départ simple pour démarrer la "
+"construction de votre application avec ZF2."
 
-#: ../view/application/index/index.phtml:4
+#: ../view/application/index/index.phtml:7
 msgid "Fork Zend Framework 2 on GitHub"
 msgstr "Faites un Fork de Zend Framework 2 sur GitHub"
 
-#: ../view/application/index/index.phtml:10
+#: ../view/application/index/index.phtml:15
 msgid "Follow Development"
 msgstr "Suivre le développement"
 
-#: ../view/application/index/index.phtml:11
+#: ../view/application/index/index.phtml:18
 #, php-format
-msgid "Zend Framework 2 is under active development. If you are interested in following the development of ZF2, there is a special ZF2 portal on the official Zend Framework website which provides links to the ZF2 %swiki%s, %sdev blog%s, %sissue tracker%s, and much more. This is a great resource for staying up to date with the latest developments!"
-msgstr "Zend Framework 2 est en cours de développement. Si vous êtes intéressé pour suivre l'évolution de ZF2, il existe un portail dédié à ZF2 sur le site officiel Zend Framework qui propose des liens vers le %swiki%s ZF2, %sdev blog%s, %ssuivi des problèmes%s, et bien plus encore. Il s'agit d'une excellente ressource pour rester à jour sur les dernières évolutions !"
+msgid ""
+"Zend Framework 2 is under active development. If you are interested in "
+"following the development of ZF2, there is a special ZF2 portal on the "
+"official Zend Framework website which provides links to the ZF2 %swiki%s, "
+"%sdev blog%s, %sissue tracker%s, and much more. This is a great resource for "
+"staying up to date with the latest developments!"
+msgstr ""
+"Zend Framework 2 est en cours de développement. Si vous êtes intéressé pour "
+"suivre l'évolution de ZF2, il existe un portail dédié à ZF2 sur le site "
+"officiel Zend Framework qui propose des liens vers le %swiki%s ZF2, %sdev "
+"blog%s, %ssuivi des problèmes%s, et bien plus encore. Il s'agit d'une "
+"excellente ressource pour rester à jour sur les dernières évolutions !"
 
-#: ../view/application/index/index.phtml:12
+#: ../view/application/index/index.phtml:19
 msgid "ZF2 Development Portal"
 msgstr "Portail sur le développement de ZF2"
 
-#: ../view/application/index/index.phtml:16
+#: ../view/application/index/index.phtml:27
 msgid "Discover Modules"
 msgstr "Découvrez les modules"
 
-#: ../view/application/index/index.phtml:17
+#: ../view/application/index/index.phtml:30
 #, php-format
-msgid "The community is working on developing a community site to serve as a repository and gallery for ZF2 modules. The project is available %son GitHub%s. The site is currently live and currently contains a list of some of the modules already available for ZF2."
-msgstr "La communauté travaille sur le développement d'un site communautaire avec l'objectif de servir de dépôt et de galerie  pour les modules ZF2. Le projet est disponible %ssur GitHub%s. Le site est déjà en ligne, et contient une liste non exhaustive des modules déjà disponibles pour ZF2."
+msgid ""
+"The community is working on developing a community site to serve as a "
+"repository and gallery for ZF2 modules. The project is available %son GitHub"
+"%s. The site is currently live and currently contains a list of some of the "
+"modules already available for ZF2."
+msgstr ""
+"La communauté travaille sur le développement d'un site communautaire avec "
+"l'objectif de servir de dépôt et de galerie  pour les modules ZF2. Le projet "
+"est disponible %ssur GitHub%s. Le site est déjà en ligne, et contient une "
+"liste non exhaustive des modules déjà disponibles pour ZF2."
 
-#: ../view/application/index/index.phtml:18
+#: ../view/application/index/index.phtml:31
 msgid "Explore ZF2 Modules"
 msgstr "Explorer les modules ZF2"
 
-#: ../view/application/index/index.phtml:22
+#: ../view/application/index/index.phtml:39
 msgid "Help &amp; Support"
 msgstr "Aide &amp; support"
 
-#: ../view/application/index/index.phtml:23
+#: ../view/application/index/index.phtml:42
 #, php-format
-msgid "If you need any help or support while developing with ZF2, you may reach us via IRC: %s#zftalk on Freenode%s. We'd love to hear any questions or feedback you may have regarding the beta releases. Alternatively, you may subscribe and post questions to the %smailing lists%s."
-msgstr "Si vous avez besoin d'aide ou de support en développant avec ZF2, vous pouvez nous joindre sur IRC : %s#zftalk sur Freenode%s. Nous aimerions avoir vos questions ou vos commentaires que vous pourriez avoir au sujet des versions bêta. Sinon, vous pouvez vous abonner, et poser des questions sur la %sliste de diffusion%s."
+msgid ""
+"If you need any help or support while developing with ZF2, you may reach us "
+"via IRC: %s#zftalk on Freenode%s. We'd love to hear any questions or "
+"feedback you may have regarding the beta releases. Alternatively, you may "
+"subscribe and post questions to the %smailing lists%s."
+msgstr ""
+"Si vous avez besoin d'aide ou de support en développant avec ZF2, vous "
+"pouvez nous joindre sur IRC : %s#zftalk sur Freenode%s. Nous aimerions avoir "
+"vos questions ou vos commentaires que vous pourriez avoir au sujet des "
+"versions bêta. Sinon, vous pouvez vous abonner, et poser des questions sur "
+"la %sliste de diffusion%s."
 
-#: ../view/application/index/index.phtml:24
+#: ../view/application/index/index.phtml:43
 msgid "Ping us on IRC"
 msgstr "Rejoignez-nous sur IRC"
-
-#: ../view/error/index.phtml:1
-msgid "An error occurred"
-msgstr "Une erreur est survenue"
-
-#: ../view/error/index.phtml:8
-msgid "Additional information"
-msgstr "Informations complémentaires"
-
-#: ../view/error/index.phtml:11
-#: ../view/error/index.phtml:35
-msgid "File"
-msgstr "Fichier"
-
-#: ../view/error/index.phtml:15
-#: ../view/error/index.phtml:39
-msgid "Message"
-msgstr "Message"
-
-#: ../view/error/index.phtml:19
-#: ../view/error/index.phtml:43
-#: ../view/error/404.phtml:55
-msgid "Stack trace"
-msgstr "Pile d'exécution"
-
-#: ../view/error/index.phtml:29
-msgid "Previous exceptions"
-msgstr "Exceptions précédentes"
-
-#: ../view/error/index.phtml:58
-msgid "No Exception available"
-msgstr "Aucune exception disponible"
 
 #: ../view/error/404.phtml:1
 msgid "A 404 error occurred"
@@ -123,8 +112,10 @@ msgid "The requested controller was unable to dispatch the request."
 msgstr "Le contrôleur demandé n'a pas pu dispatcher la requête."
 
 #: ../view/error/404.phtml:13
-msgid "The requested controller could not be mapped to an existing controller class."
-msgstr "Le contrôleur demandé ne correspond pas à une classe existante de contrôleur."
+msgid ""
+"The requested controller could not be mapped to an existing controller class."
+msgstr ""
+"Le contrôleur demandé ne correspond pas à une classe existante de contrôleur."
 
 #: ../view/error/404.phtml:16
 msgid "The requested controller was not dispatchable."
@@ -136,7 +127,8 @@ msgstr "L'URL demandée n'a pas pu trouver de route correspondante."
 
 #: ../view/error/404.phtml:22
 msgid "We cannot determine at this time why a 404 was generated."
-msgstr "Nous ne pouvons pas déterminer pour le moment pourquoi une 404 a été générée."
+msgstr ""
+"Nous ne pouvons pas déterminer pour le moment pourquoi une 404 a été générée."
 
 #: ../view/error/404.phtml:34
 msgid "Controller"
@@ -147,7 +139,176 @@ msgstr "Contrôleur"
 msgid "resolves to %s"
 msgstr "résout en %s"
 
-#: ../view/error/404.phtml:51
-msgid "Exception"
-msgstr "Exception"
+#: ../view/error/404.phtml:53 ../view/error/index.phtml:8
+msgid "Additional information"
+msgstr "Informations complémentaires"
 
+#: ../view/error/404.phtml:56 ../view/error/404.phtml:80
+#: ../view/error/index.phtml:11 ../view/error/index.phtml:35
+msgid "File"
+msgstr "Fichier"
+
+#: ../view/error/404.phtml:60 ../view/error/404.phtml:84
+#: ../view/error/index.phtml:15 ../view/error/index.phtml:39
+msgid "Message"
+msgstr "Message"
+
+#: ../view/error/404.phtml:64 ../view/error/404.phtml:88
+#: ../view/error/index.phtml:19 ../view/error/index.phtml:43
+msgid "Stack trace"
+msgstr "Pile d'exécution"
+
+#: ../view/error/404.phtml:74 ../view/error/index.phtml:29
+msgid "Previous exceptions"
+msgstr "Exceptions précédentes"
+
+#: ../view/error/404.phtml:103 ../view/error/index.phtml:58
+msgid "No Exception available"
+msgstr "Aucune exception disponible"
+
+#: ../view/error/index.phtml:1
+msgid "An error occurred"
+msgstr "Une erreur est survenue"
+
+#: ../view/goalio-forgot-password/email/forgot.phtml:2
+msgid ""
+"You have received this email because you initiated to reset your password "
+"with us. To continue with the process, please click the link below:"
+msgstr ""
+"Vous avez reçu cet email car vous avez activer la procédure de "
+"réinitialisation de votre mot de passe. Pour continuer cette procédure, "
+"veuillez cliquer sur le lien suivant:"
+
+#: ../view/goalio-forgot-password/forgot/forgot.phtml:1
+#: ../view/goalio-forgot-password/forgot/sent.phtml:1
+msgid "Forgot your password?"
+msgstr "Mot de passe oublié ?"
+
+#: ../view/goalio-forgot-password/forgot/forgot.phtml:6
+#: ../view/zfc-user/user/register.phtml:15
+msgid "Email"
+msgstr "Email"
+
+#: ../view/goalio-forgot-password/forgot/forgot.phtml:9
+#: ../view/zfc-user/user/register.phtml:18
+msgid "Enter email"
+msgstr "Veuillez indiquer votre email"
+
+#: ../view/goalio-forgot-password/forgot/forgot.phtml:13
+msgid "Request new password"
+msgstr "Demander un nouveau mot de passe"
+
+#: ../view/goalio-forgot-password/forgot/forgot.phtml:38
+#: ../view/goalio-forgot-password/forgot/sent.phtml:5
+msgid "Back to login?"
+msgstr "Retour à la page de connexion?"
+
+#: ../view/goalio-forgot-password/forgot/passwordchanged.phtml:1
+msgid "Your password has been changed."
+msgstr "Votre mot de passe a été modifié"
+
+#: ../view/goalio-forgot-password/forgot/passwordchanged.phtml:3
+msgid "You can now login using your new password."
+msgstr "Vous pouvez désormais vous connecter avec votre nouveau mot de passe"
+
+#: ../view/goalio-forgot-password/forgot/passwordchanged.phtml:5
+msgid "Back to login."
+msgstr "Retour à la page de connexion."
+
+#: ../view/goalio-forgot-password/forgot/sent.phtml:3
+msgid "A reminder has been sent to your e-mail address"
+msgstr "Un email de confirmation vous a été envoyé"
+
+#: ../view/layout/layout.phtml:6
+msgid "Skeleton Application"
+msgstr "Skeleton Application"
+
+#: ../view/layout/layout.phtml:51
+msgid "Home"
+msgstr "Accueil"
+
+#: ../view/layout/layout.phtml:71
+msgid "All rights reserved."
+msgstr "Tous droits réservés."
+
+#: ../view/layout/menu/login-register.phtml:10
+msgid "Login"
+msgstr "Connexion"
+
+#: ../view/layout/menu/login-register.phtml:22
+#: ../view/zfc-user/user/register.phtml:46
+msgid "Register"
+msgstr "Inscription"
+
+#: ../view/layout/menu/logout.phtml:11
+msgid "Logout"
+msgstr "Se déconnecter"
+
+#: ../view/zfc-user/user/index.phtml:2
+msgid "Hello"
+msgstr "Bonjour"
+
+#: ../view/zfc-user/user/index.phtml:3
+msgid "[Sign Out]"
+msgstr "Déconnexion"
+
+#: ../view/zfc-user/user/login.phtml:8
+msgid "Enter email or username"
+msgstr "Veuillez indiquer votre email ou votre nom d'utilisateur"
+
+#: ../view/zfc-user/user/login.phtml:9
+msgid "Email or Username"
+msgstr "Email ou nom d'utilisateur"
+
+#: ../view/zfc-user/user/login.phtml:14
+#: ../view/zfc-user/user/register.phtml:30
+#: ../view/zfc-user/user/register.phtml:36
+msgid "Enter password"
+msgstr "Veuillez indiquer votre mot de passe"
+
+#: ../view/zfc-user/user/login.phtml:18
+msgid "Keep me logged in"
+msgstr "Garder ma session active"
+
+#: ../view/zfc-user/user/login.phtml:30
+msgid "Sign In"
+msgstr "Connexion"
+
+#: ../view/zfc-user/user/login.phtml:50
+msgid "Forgot password ?"
+msgstr "Mot de passe oublié ?"
+
+#: ../view/zfc-user/user/login.phtml:75
+msgid "Not registered?"
+msgstr "Déjà inscrit ?"
+
+#: ../view/zfc-user/user/login.phtml:75
+msgid "Sign up !"
+msgstr "S'inscrire !"
+
+#: ../view/zfc-user/user/register.phtml:9
+msgid "Username"
+msgstr "Nom d'utilisateur"
+
+#: ../view/zfc-user/user/register.phtml:12
+msgid "Enter your username"
+msgstr "Veuillez indiquer votre nom d'utilisateur"
+
+#: ../view/zfc-user/user/register.phtml:21
+msgid "Display Name"
+msgstr "Votre nom visible sur votre profil"
+
+#: ../view/zfc-user/user/register.phtml:24
+msgid "Enter your display name"
+msgstr "Veuillez indiquer votre nom visible sur votre profil"
+
+#: ../view/zfc-user/user/register.phtml:27
+msgid "Password"
+msgstr "Mot de passe"
+
+#: ../view/zfc-user/user/register.phtml:33
+msgid "Password Verify"
+msgstr "Mot de passe (Vérification)"
+
+#~ msgid "Exception"
+#~ msgstr "Exception"
