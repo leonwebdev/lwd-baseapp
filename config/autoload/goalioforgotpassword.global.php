@@ -73,7 +73,7 @@ $settings = array(
          * If set to true, service will validate that given e-mail address is really registred
          *
          */
-        //'validate_existing_record' => true
+        'validate_existing_record' => true
 
         /**
          * End of GoalioForgotPassword configuration
