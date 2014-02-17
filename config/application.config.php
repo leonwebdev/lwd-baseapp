@@ -4,8 +4,9 @@ return array(
     'modules' => array(
         'ZfcBase',
         'ZfcUser',
-        'GoalioRememberMe',
         'GoalioForgotPassword',
+        'GoalioRememberMe',
+        'GoalioMailService',
         'Application',
     ),
 
