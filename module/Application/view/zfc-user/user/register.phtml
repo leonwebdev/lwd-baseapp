@@ -9,37 +9,42 @@ $userName = $form->get('username');
 $userName->setLabel($this->translate('Username'));
 $userName->setAttribute('class', 'form-control');
 $userName->setAttribute('type', 'text');
+$userName->setAttribute('id', 'username');
 $userName->setAttribute('placeholder', $this->translate('Enter your username'));
 
 $email = $form->get('email');
 $email->setLabel($this->translate('Email'));
 $email->setAttribute('class', 'form-control');
 $email->setAttribute('type', 'email');
+$email->setAttribute('id', 'email');
 $email->setAttribute('placeholder', $this->translate('Enter email'));
 
 $displayName = $form->get('display_name');
 $displayName->setLabel($this->translate('Display Name'));
 $displayName->setAttribute('class', 'form-control');
 $displayName->setAttribute('type', 'text');
+$displayName->setAttribute('id', 'display_name');
 $displayName->setAttribute('placeholder', $this->translate('Enter your display name'));
 
 $password = $form->get('password');
 $password->setLabel($this->translate('Password'));
 $password->setAttribute('class', 'form-control');
 $password->setAttribute('type', 'password');
+$password->setAttribute('id', 'password');
 $password->setAttribute('placeholder', $this->translate('Enter password'));
 
 $passwordVerify = $form->get('passwordVerify');
 $passwordVerify->setLabel($this->translate('Password Verify'));
 $passwordVerify->setAttribute('class', 'form-control');
 $passwordVerify->setAttribute('type', 'password');
+$passwordVerify->setAttribute('id', 'passwordVerify');
 $passwordVerify->setAttribute('placeholder', $this->translate('Enter password'));
 
 $formButton = $form->get('submit');
 $formButton->setAttribute('class', 'btn btn-default');
 
 $form->prepare();
-$form->setAttribute('action', $this->url('zfcuser/register'));
+$form->setAttribute('action', $this->url('zfcuser/register', array(), null, true));
 $form->setAttribute('method', 'post');
 ?>
 <div class="register-form">   

@@ -4,16 +4,20 @@ $form = $this->loginForm;
 
 $identity = $form->get('identity');
 $identity->setAttribute('class', 'form-control');
+$identity->setAttribute('id', 'identity');
 //$identity->setAttribute('type', 'email');
 $identity->setAttribute('placeholder', $this->translate('Enter email or username'));
+$identity->setLabel($this->translate('Email or Username'));
 
 $credential = $form->get('credential');
+$credential->setAttribute('id', 'credential');
 $credential->setAttribute('class', 'form-control');
 $credential->setAttribute('type', 'password');
 $credential->setAttribute('placeholder', $this->translate('Enter password'));
 
 $rememberMe = $form->get('remember_me');
 $rememberMe->setAttribute('id', 'remember_me');
+$rememberMe->setLabel($this->translate('Keep me logged in'));
 
 $formButton = $form->get('submit');
 $formButton->setAttribute('class', 'btn btn-default');
@@ -28,35 +32,39 @@ $form->setAttribute('method', 'post');
     <h1><?php echo $this->translate('Sign In'); ?></h1>
     <?php echo $this->form()->openTag($form) ?>
     <dl class="zend-form">
-        <?php if ($this->formElementErrors($form->get('identity'))) : ?>
-            <div class="alert alert-danger alert-dismissable">
-                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                <strong>Warning!</strong><?php echo $this->formElementErrors($form->get('identity')) ?>
+        <?php if ( $this->formElementErrors($form->get('identity')) ) : ?>
+            <div class="row">
+                <div class="col-lg-5 col-md-5 col-sm-7 col-xs-12">
+                    <div class="alert alert-danger alert-dismissable">
+                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                        <strong><?php echo $this->translate('Warning!') ?></strong><?php echo $this->formElementErrors($form->get('identity')) ?>
+                    </div>
+                </div>
             </div>
         <?php endif ?>
 
         <div class="form-group row">
-            <div class="col-lg-4 col-md-5 col-sm-7 col-xs-12">
+            <div class="col-lg-5 col-md-5 col-sm-7 col-xs-12">
                 <dt><?php echo $this->formLabel($form->get('identity')) ?></dt>
                 <dd><?php echo $this->formInput($form->get('identity')) ?></dd>
             </div>
         </div>
         <div class="form-group row">
-            <div class="col-lg-4 col-md-5 col-sm-7 col-xs-12">
+            <div class="col-lg-5 col-md-5 col-sm-7 col-xs-12">
                 <dt><?php echo $this->formLabel($form->get('credential')) ?></dt>
                 <dd><?php echo $this->formInput($form->get('credential')) ?></dd>
                 <a class="pull-right" href="<?php echo $this->url('zfcuser/forgotpassword', array(), null, true) . ($this->redirect ? '?redirect=' . $this->redirect : '') ?>"><?php echo $this->translate('Forgot password ?'); ?></a>
 
             </div>
         </div>
-<div class="form-group row">
-            <div class="col-lg-4 col-md-5 col-sm-7 col-xs-12">
-        <div class="checkbox">
-            
-                <?php echo $this->formCheckbox($form->get('remember_me')) ?> <?php echo $this->formLabel($form->get('remember_me')) ?>
-           
-        </div>
-                    </div>
+        <div class="form-group row">
+            <div class="col-lg-5 col-md-5 col-sm-7 col-xs-12">
+                <div class="checkbox">
+                    <?php // echo $this->translate('Stay logged in') ?>
+                    <?php echo $this->formCheckbox($form->get('remember_me')) ?> <?php echo $this->formLabel($form->get('remember_me')) ?>
+
+                </div>
+            </div>
         </div>
 
         <?php $redirect = $this->url('user', array(), null, true); ?>
@@ -70,6 +78,6 @@ $form->setAttribute('method', 'post');
     <?php echo $this->form()->closeTag() ?>
 
     <?php if ($this->enableRegistration) : ?>
-        <?php echo $this->translate('Not registered?'); ?> <a href="<?php echo $this->url('zfcuser/register') . ($this->redirect ? '?redirect=' . $this->redirect : '') ?>"><?php echo $this->translate('Sign up!'); ?></a>
+        <?php echo $this->translate('Not registered?'); ?> <a href="<?php echo $this->url('zfcuser/register', array(), null, true) . ($this->redirect ? '?redirect=' . $this->redirect : '') ?>"><?php echo $this->translate('Sign up !'); ?></a>
     <?php endif; ?>
 </div>
