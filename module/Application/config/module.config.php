@@ -18,6 +18,7 @@ return array(
                         'lang' => '(en|fr)?',
                     ),
                     'defaults' => array(
+                        //'lang' => 'fr',
                         'controller' => 'Application\Controller\Index',
                         'action' => 'index',
                     ),
@@ -85,7 +86,6 @@ return array(
                     ),
                 ),
             ),
-            
             /* Change route Zfcuser with lang */
             'zfcuser' => array(
                 'type' => 'Segment',
@@ -94,12 +94,12 @@ return array(
                     //'route' => '/user',
                     'route' => '[/:lang]/user',
                     'constraints' => array(
-                        'lang' => '(en|fr)?',
+                        'lang' => '(dt|en|fr)?',
                     ),
                     'defaults' => array(
                         'controller' => 'zfcuser',
                         'action' => 'index',
-                        'lang' => 'en'
+                        'lang' => 'dt'
                     ),
                 ),
                 'may_terminate' => true,
@@ -203,12 +203,78 @@ return array(
             'Zend\Cache\Service\StorageCacheAbstractServiceFactory',
             'Zend\Log\LoggerAbstractServiceFactory',
         ),
+        'factories' => array(
+            'navigation' => 'Zend\Navigation\Service\DefaultNavigationFactory',
+        ),
         'aliases' => array(
             'translator' => 'MvcTranslator',
         ),
     ),
+    'view_helpers' => array(
+      'invokables' => array(
+         'current_route' => '\Application\View\Helper\CurrentRoute',
+         'current_parameters' => '\Application\View\Helper\CurrentParameters',
+      ),
+   ),
+    // Navigation
+    'navigation' => array(
+        'default' => array(
+            array(
+                'label' => 'Home',
+                'route' => 'home',
+            ),
+//            array(
+//                'label' => 'User',
+//                'route' => 'zfcuser',
+//                'pages' => array(
+//                    array(
+//                        'label' => 'Home',
+//                        'route' => 'zfcuser',
+//                        'action' => 'index',
+//                    ),
+////                    array(
+////                        'label' => 'Edit',
+////                        'route' => 'album',
+////                        'action' => 'edit',
+////                    ),
+////                    array(
+////                        'label' => 'Delete',
+////                        'route' => 'album',
+////                        'action' => 'delete',
+////                    ),
+//                ),
+//            ),
+        ),
+        'user' => array(
+            array(
+                'label' => 'Home',
+                'route' => 'zfcuser',
+            ),
+            array(
+                'label' => 'User',
+                'route' => 'zfcuser',
+                'pages' => array(
+                    array(
+                        'label' => 'Home',
+                        'route' => 'zfcuser',
+                        'action' => 'index',
+                    ),
+//                    array(
+//                        'label' => 'Edit',
+//                        'route' => 'album',
+//                        'action' => 'edit',
+//                    ),
+//                    array(
+//                        'label' => 'Delete',
+//                        'route' => 'album',
+//                        'action' => 'delete',
+//                    ),
+                ),
+            ),
+        ),
+    ),
     'translator' => array(
-        'locale' => 'en_US',
+        'locale' => 'fr_FR',
         'translation_file_patterns' => array(
             array(
                 'type' => 'gettext',
@@ -236,10 +302,8 @@ return array(
             'menu/login-register' => __DIR__ . '/../view/layout/menu/login-register.phtml',
             'error/404' => __DIR__ . '/../view/error/404.phtml',
             'error/index' => __DIR__ . '/../view/error/index.phtml',
-            
             // Template zfc-user login ovveride
             'zfc-user/user/login' => __DIR__ . '/../view/zfc-user/user/login.phtml',
-            
         ),
         'template_path_stack' => array(
             __DIR__ . '/../view',
